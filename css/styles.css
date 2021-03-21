@@ -69,6 +69,7 @@ img {
 .page header {
     padding-top: 32px;
     padding-bottom: 32px;
+    border-bottom: 2px solid #ececec
 }
 .logo {
     color: var(--button-portfolio-color);
@@ -106,6 +107,7 @@ padding-right: 15px;
 padding-left: 15px;
 margin-right: auto;
 margin-left: auto;
+height: 100%;
 }
 
 .team {
@@ -113,6 +115,8 @@ margin-left: auto;
     padding-bottom: 94px;
     background-color:var(--bg-page-color);
     text-align: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .section {
@@ -130,6 +134,9 @@ margin-left: auto;
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .site-nav.link:hover,
 .site-nav.link:focus {
@@ -158,7 +165,8 @@ margin-left: auto;
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.02em;
- }  
+ } 
+
  .contacts-nav.item:hover,
  .contacts-nav.item:focus {
    color: var(--alternative-text-color);
@@ -189,22 +197,22 @@ margin-left: auto;
  .navigation,
  .portfolio-navigation {
      display: flex;
+     flex-direction: row;
      align-items: center;
      margin-right: auto;
  }
 /* hero */
 .hero {
     text-align: center;
-   
-}
-
-.hero .container {
     background-color: var(--bg-color);
     min-width: 100vh ;
     padding-top: 200px;
-    padding-bottom: 200px;  
-    
-} 
+    padding-bottom: 200px;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+
 .hero-title {
     color: var(--title-name-color);
     font-style: normal;
@@ -362,21 +370,31 @@ text-align: center;
 .portfolio-page {
     font-family: Roboto, sans-serif;
     background-color: var(--title-name-color);
-    color: var(--primary-text-color);    
+    color: var(--primary-text-color); 
+    
 }
-
+.portfolio-navigator {
+    padding-top: 94px;
+}
 /* footer */
+.footer {
+    margin-right: auto; 
+    margin-left: auto;
+    background-color: var(--bg-color);
+    height: 252px;
+}
+ 
+
 .portfolio-container .footer-portfolio,
 .container .footer-studio {
-    background-color: var(--bg-color);
-    height: 252px;  
+   padding-top: 60px;
+   height: 252px;
 }
-
 .footer-studio .logo,
 .footer-portfolio .logo {
-    display: inline-block;
-  margin-top: 60px;
-  margin-bottom: 30px;
+    display: block;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 
 .logo-footer,
@@ -436,7 +454,7 @@ text-align: center;
 
 /* projects */
 
-.projects {
+.projects-container {
     padding-top: 50px;
 }
 .portfolio-projects {
@@ -454,6 +472,7 @@ flex-wrap: wrap;
 .projects-title {
     margin: 20px 24px 4px 24px;
     color: var(--title-text-color);
+    font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -467,6 +486,7 @@ flex-wrap: wrap;
 .projects-work {
     margin: 0 24px 20px 24px;
     color: var(--primary-text-color);
+    font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -491,10 +511,10 @@ flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 50px;
     list-style: none;
-    padding-top: 94px;
-    padding-bottom: 50px;
 }
 .button{
+    display: inline-block;
+    padding: 6px 22px;
     color: var(--title-text-color);
     background-color: var(--bg-team-color);
     cursor: pointer;
@@ -503,11 +523,10 @@ flex-wrap: wrap;
     font-size: 16px;
     text-align: center;
     margin-right: 8px;
-    display: inline-block;
-    padding: 6px 22px;
-    min-width: 73px;
     border-radius: 4px;
+    min-width: 73px;
     text-decoration: none;
+    border: whitesmoke;
     }
     
 .button:hover,
